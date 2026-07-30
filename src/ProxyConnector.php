@@ -59,7 +59,7 @@ class ProxyConnector implements ConnectorInterface
     public function __construct(
         #[\SensitiveParameter]
         $proxyUrl,
-        $connector = null,
+        ?ConnectorInterface $connector = null,
         array $httpHeaders = array()
     ) {
         // support `http+unix://` scheme for Unix domain socket (UDS) paths
